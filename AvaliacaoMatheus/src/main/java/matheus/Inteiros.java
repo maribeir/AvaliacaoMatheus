@@ -107,9 +107,9 @@ public class Inteiros extends JFrame {
 			     for (int x = campoA.length; x < campoB.length; x++)
 				     texto += campoB[x];
 
-			// caso resultado seja maior que 1.000.000, retorna -1
-			if (Integer.parseInt(texto) > 1000000)
-				texto = "-1";
+			// caso resultado esteja preenchido e seja maior que 1.000.000, retorna -1
+			if (!"".equals(texto) && Integer.parseInt(texto) > 1000000)
+					texto = "-1";
 			
 			textResultado.setText(texto);
 		}
